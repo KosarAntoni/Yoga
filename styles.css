@@ -927,18 +927,16 @@ footer input[type="submit"] {
     color: rgba(255, 255, 255, 0.5);
 }
 
-@media screen and (min-width: 768px) and (max-width: 1340px) {
+@media (min-width: 768px) and (max-width: 1340px) {
     .header-name {
         font-size: 144px;
-        line-height: 0px;    
         letter-spacing: 0.26em;
     }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .header-name {
         font-size: 67px;
-        line-height: 0px;    
         letter-spacing: 0.26em;
     }
 }
