@@ -20,13 +20,13 @@ body {
     background-color: #FCF8FE;
 }
 
+
 h2 {
     font-size: 30px;
     line-height: 40px; 
     font-weight: bold;
     color: #8E80A9;
 }
-
 
 
 /* HEADER */
@@ -391,6 +391,7 @@ header .social-btns {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 
     background: url(images/backgroundSection3.png) no-repeat 50% 25%;
     background-size: cover;
@@ -831,18 +832,19 @@ header .social-btns {
 
 
 footer {
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
 
 .footer-top {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 
     height: 400px;
+    width: 100%;
     background: url(images/footerBackground.jpg) no-repeat 50%;
     background-size: cover;
-    padding: 70px 275px;
 }
 
 footer .social-btns {
@@ -859,6 +861,7 @@ footer .social-btns {
 
     max-width: 450px;
     width: 100%;
+    padding: 70px 0;
 }
 
 footer .input-field {
@@ -928,13 +931,51 @@ footer input[type="submit"] {
 }
 
 @media (min-width: 768px) and (max-width: 1340px) {
+    header,
+    .directions,
+    .abonaments,
+    .rewiews,
+    .footer-top {
+        padding-left: 75px;
+        padding-right: 75px;
+        box-sizing: border-box;
+    }
+
+    header {
+        height: 770px;
+    }
+
+    .header-description {
+        font-size: 24px;
+    }
+
     .header-name {
         font-size: 144px;
         letter-spacing: 0.26em;
     }
 }
 
-@media (max-width: 768px) {
+
+
+@media (max-width: 767px) {
+    header,
+    .directions,
+    .abonaments,
+    .rewiews,
+    .footer-top {
+        padding-left: 35px;
+        padding-right: 35px;
+        box-sizing: border-box;
+    }
+
+    header {
+        height: 335px;
+    }
+
+    .header-description {
+        font-size: 18px;
+    }
+
     .header-name {
         font-size: 67px;
         letter-spacing: 0.26em;
