@@ -177,7 +177,6 @@ header {
     font-size: 265px;
     font-weight: 600;
     letter-spacing: 0.34em;
-    line-height: 250px;
     text-align: center;
 
     width: 100%;
@@ -930,7 +929,7 @@ footer input[type="submit"] {
     color: rgba(255, 255, 255, 0.5);
 }
 
-@media (min-width: 768px) and (max-width: 1340px) {
+@media only screen and (max-width: 1340px) {
     header,
     .directions,
     .abonaments,
@@ -953,11 +952,24 @@ footer input[type="submit"] {
         font-size: 144px;
         letter-spacing: 0.26em;
     }
+    .first-lesson-btn {
+        font-size: 12px;
+    }
+    .first-lesson-btn::before {
+        width: 30px;
+        height: 26px;
+    }
 }
 
 
 
-@media (max-width: 767px) {
+@media (max-device-width: 767px), (max-width: 767px) {
+    .header-bottom .social-btns,
+    .city,
+    .menu-text {
+        display: none;
+    }
+
     header,
     .directions,
     .abonaments,
@@ -969,15 +981,19 @@ footer input[type="submit"] {
     }
 
     header {
+        padding: 20px 15px;
         height: 335px;
+        background-position: 50% bottom;
     }
 
     .header-description {
         font-size: 18px;
+        margin-left: 2em;
     }
 
     .header-name {
         font-size: 67px;
+        line-height: ;
         letter-spacing: 0.26em;
     }
 }
