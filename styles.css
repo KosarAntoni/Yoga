@@ -934,7 +934,8 @@ footer input[type="submit"] {
     color: rgba(255, 255, 255, 0.5);
 }
 
-@media screen and (min-device-width: 768px) and (max-device-width: 1340px) {
+@media screen and (min-device-width: 768px) and (max-device-width: 1340px)
+       screen and (min-width: 768px) and (max-width: 1340px) {
     header,
     .directions,
     .abonaments,
