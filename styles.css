@@ -483,6 +483,11 @@ header .social-btns {
     background-color: #8E80A9;
 }
 
+.abonaments .second-block .order-btn {
+    display: none;
+}
+
+
 
 /* SECTION 4 */
 
@@ -965,6 +970,12 @@ footer input[type="submit"] {
 
 @media screen and (max-width: 767px),
        screen and (max-device-width: 767px) {
+
+    h2 {
+        font-size: 18px;
+        line-height: 0;
+    }
+
     .header-bottom .social-btns,
     .city,
     .menu-text {
@@ -996,5 +1007,122 @@ footer input[type="submit"] {
         font-size: 67px;
         letter-spacing: 0.26em;
     }
+
+    .directions {
+        background: url(/images/backgroundSection2Small.png) no-repeat left;
+        background-size: 80%;
+    }
+
+    .posts-wrapper,
+    .second-posts {
+        flex-direction: column;
+    }
+
+    .post,
+    .main-post {
+        max-width: 250px;
+        margin-right: 0;
+        margin-bottom: 30px;
+        flex-direction: column;
+    }
+
+    .post img,
+    .main-post img {
+        height: 200px;
+        width: 250px;
+    }
+    
+    .post .post-wrapper  {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+    
+        background: #FFFFFF;
+        box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2);
+    }
+    
+    .post .post-text {
+        padding: 20px;
+        margin-right: auto;
+    }
+    
+    .post h3 {
+        font-weight: bold;
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+    
+    .post .post-text div {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .post .post-text div:last-of-type {
+        margin-top: 5px;
+    }
+    
+    .post .post-text div:last-of-type span {
+        color: #E65C7B;
+    }
+    
+    .post .post-text div span {
+        font-size: 10px;
+    }
+    
+    .post .post-wrapper .full-post {
+        position: static;
+    
+        height: auto;
+
+        width: 64px;
+        max-height: 100%;
+        background: #8373A1 url(images/firstLessonArrow.svg) no-repeat 50%;
+    }
+    
+    .abonament-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .abonaments .main-block,
+    .abonaments .second-block {
+        justify-content: space-between;
+
+        box-sizing: border-box;
+        width: 250px;
+        height: 200px;
+        padding: 30px 50px;
+        margin-bottom: 30px;
+    }
+
+    .abonaments h3 {
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .abonaments .price {
+        font-size: 18px;
+        margin: 0;
+    }
+
+    .abonaments .pink-text span{
+        font-size: 10px;
+    }
+
+    .abonaments .pink-text{
+        margin: 0;
+    }
+
+    .abonaments .order-btn,
+    .abonaments .second-block .order-btn {
+        display: block;
+        padding: 15px 20px;
+        font-size: 10px;
+    }
+    
+    .our-team-rewiews {
+        display: none;
+    }
+
 }
 
