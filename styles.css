@@ -929,7 +929,7 @@ footer input[type="submit"] {
     color: rgba(255, 255, 255, 0.5);
 }
 
-@media only screen and (max-width: 1340px) {
+@media screen and (min-device-width: 768px) and (max-device-width: 1340px) {
     header,
     .directions,
     .abonaments,
@@ -963,7 +963,8 @@ footer input[type="submit"] {
 
 
 
-@media (max-device-width: 767px), (max-width: 767px) {
+@media screen and (max-width: 767px),
+       screen and (max-device-width: 767px) {
     .header-bottom .social-btns,
     .city,
     .menu-text {
