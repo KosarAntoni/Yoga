@@ -223,17 +223,26 @@ header .social-btns {
 
 .tw-btn {
     background: url(images/TW.svg) no-repeat 50%;
-    color: transparent;
+    font-size: 0;
+    width: 15px;
+    height: 15px;
+    display: block;
 }
 
 .fb-btn {
     background: url(images/FB.svg) no-repeat 50%;
-    color: transparent;
+    font-size: 0;
+    width: 15px;
+    height: 15px;
+    display: block;
 }
 
 .vk-btn {
     background: url(images/VK.svg) no-repeat 50%;
-    color: transparent;
+    font-size: 0;
+    width: 15px;
+    height: 15px;
+    display: block;
 }
 
 
@@ -391,6 +400,8 @@ header .social-btns {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    padding-bottom: 145px;
+    box-sizing: border-box;
 
     background: url(images/backgroundSection3.png) no-repeat 50% 25%;
     background-size: cover;
@@ -421,8 +432,6 @@ header .social-btns {
 .abonament-wrapper {
     display: flex;
     justify-content: space-between;
-
-    margin-bottom: 145px;
 }
 
 .abonaments .main-block {
@@ -515,14 +524,11 @@ header .social-btns {
 }
 
 .teachers-list {
-    transition-duration: 1000ms;
-}
-
-.teachers-list {
     width: 50%;
     padding-right: 65px;
     box-sizing: border-box;
 
+    transition-duration: 1000ms;
 
     display: flex;
     flex-direction: column;
@@ -561,6 +567,8 @@ header .social-btns {
 }
 
 .teacher-item img {
+    width: 144px;
+    height: 144px;
     position: absolute;
     bottom: 15px;
     left: -25px;
@@ -570,14 +578,15 @@ header .social-btns {
 .teacher-name {
     color: #E54C7B;
     font-size: 12px;
-    height: 20px;
+    line-height: 20px;
     margin-right: auto;
 }
 
 .our-team .social-btns {
     display: flex;
-    justify-content: space-between;    
-    height: 20px;
+    justify-content: space-between;
+    width: 60px;
+    margin-left: -3px;  
 }
 
 .hidden {
@@ -690,7 +699,6 @@ header .social-btns {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 
     margin-bottom: 145px;
 }
@@ -766,7 +774,8 @@ header .social-btns {
 
 .reviewer-data .social-btns {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
+    width: 60px;
     margin-left: -3px;    
 }
 
@@ -786,7 +795,7 @@ header .social-btns {
 
 .ant-carousel {
     max-width: 930px;
-    margin: 50px auto auto;
+    margin: 0 auto auto;
 
     width: auto;
     position: relative;
@@ -855,7 +864,6 @@ footer .social-btns {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 6%;
 }
 
 .footer-top form {
@@ -892,10 +900,10 @@ footer input[type="submit"] {
 
 .footer-copyrights {
     max-width: 100%;
-    padding: 30px 275px 25px;
+    padding: 30px 0 25px;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 
     background: #8373A1;
 }
@@ -1010,8 +1018,9 @@ footer input[type="submit"] {
     }
 
     .directions {
-        background: url(/images/backgroundSection2Small.png) no-repeat left;
+        background: url(images/backgroundSection2Small.png) no-repeat left;
         background-size: 80%;
+        margin-bottom: 70px;
     }
 
     .posts-wrapper,
@@ -1033,6 +1042,7 @@ footer input[type="submit"] {
         width: 250px;
     }
     
+    .main-post .post-wrapper,
     .post .post-wrapper  {
         display: flex;
         flex-direction: row;
@@ -1042,34 +1052,41 @@ footer input[type="submit"] {
         box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2);
     }
     
+    .main-post .post-text,
     .post .post-text {
         padding: 20px;
         margin-right: auto;
     }
     
+    .main-post h3,
     .post h3 {
         font-weight: bold;
         font-size: 12px;
         margin-bottom: 5px;
     }
     
+    .main-post .post-text div,
     .post .post-text div {
         display: flex;
         flex-direction: column;
     }
     
+    .main-post .post-text div:last-of-type,
     .post .post-text div:last-of-type {
         margin-top: 5px;
     }
     
+    .main-post .post-text div:last-of-type span,
     .post .post-text div:last-of-type span {
         color: #E65C7B;
     }
     
+    .main-post .post-text div span,
     .post .post-text div span {
         font-size: 10px;
     }
     
+    .main-post .post-wrapper .full-post,
     .post .post-wrapper .full-post {
         position: static;
     
@@ -1078,6 +1095,10 @@ footer input[type="submit"] {
         width: 64px;
         max-height: 100%;
         background: #8373A1 url(images/firstLessonArrow.svg) no-repeat 50%;
+    }
+
+    .abonaments {
+        padding-bottom: 70px;
     }
     
     .abonament-wrapper {
@@ -1120,9 +1141,210 @@ footer input[type="submit"] {
         padding: 15px 20px;
         font-size: 10px;
     }
+
+
+
+
     
-    .our-team-rewiews {
+
+    .our-team {
+        margin-bottom: 70px;
+    }
+    
+    .our-team h2 {
+        margin-bottom: 40px;
+    }
+    
+   
+    .teachers-list {
+        align-items: center;
+        width: 100%;
+        padding: 0;
+    }
+    
+    .teacher-item {
+        max-width: 270px;
+        height: 80px;
+        margin: 15px;
+        padding: 15px;
+        padding-left: 95px;
+
+    }
+        
+    .teacher-item img {
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+    }
+    
+    .teacher-item div:first-of-type,
+    .teacher-name {
+        font-size: 10px;
+        line-height: 15px;
+    }
+    
+    .our-team .social-btns {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;    
+
+        position: absolute;
+        top: 15px;
+        right: 15px;
+
+        height: 50px;
+        width: 20px;
+    }
+    
+    .teacher-name {
+        margin-bottom: 5px;
+    }
+    
+    .lesson-type {
+        font-size: 10px;
+    }
+    
+    .teacher-item .see-more {
         display: none;
+    }
+    
+    .navigation {
+        margin-bottom: 25px;
+    }
+    
+    
+    .teacher-about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 100%;
+        padding: 0 15px;
+    }
+    
+    .teacher-about h3 {
+        display: none;
+    }
+    
+    .teacher-about .experience {
+        font-size: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .teacher-about p {
+        max-width: 270px;
+        font-size: 10px;
+        line-height: 15px;
+    }
+
+
+
+
+
+    .reviews {
+        margin-bottom: 70px;
+    }
+
+    .reviews h2 {
+        margin-bottom: 40px;
+    }
+
+    .review-post {        
+        width: 250px;
+        padding: 40px 15px 30px;
+    }
+    
+    .review-post p {
+        font-size: 10px;
+        line-height: 15px;
+        max-width: 250px;
+    
+        margin-bottom: 1.5em;
+    }
+    
+    .ant-carousel {
+        max-width: 270px;
+      }
+
+    .footer-top {
+        align-items: center;
+        flex-direction: column-reverse;
+        padding: 0;
+        height: auto;
+    }
+
+    .footer-about {
+        padding: 50px 35px 40px;
+        background-color: #8373A1;
+    }
+
+    .footer-about div {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .footer-about div span {
+        color: #fff;
+    }
+
+    footer .social-btns li{
+        width: 30px;
+        height: 30px;
+        margin-right: 20px;
+    }
+
+
+    footer .social-btns li a{
+        filter: brightness(1000%);
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-size: contain;
+        
+    }
+
+    .footer-top form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center ;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 70px 35px;
+    }
+
+    .footer-top form h2 {
+        line-height: normal;
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+
+    footer .input-field {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+    
+    footer input[type="submit"] {
+        background: #E65C7B;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+    }
+    
+
+    .footer-copyrights {
+        padding: 0 35px 50px;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .footer-copyrights a {
+        margin-bottom: 25px;
     }
 
 }

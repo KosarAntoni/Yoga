@@ -7,7 +7,10 @@
 //add div to document
 let sectionNumber = document.createElement("div");
 sectionNumber.classList.add("section-number");
-document.body.appendChild(sectionNumber);
+if (window.innerWidth > 768) {
+	document.body.appendChild(sectionNumber);
+}
+
 
 const targets = document.querySelectorAll(".sectionCounter");
 
@@ -46,7 +49,7 @@ targets.forEach(section => {
 // 
 
 let currentPage = 1;
-let recordsPerPage = 3;
+let recordsPerPage = window.innerWidth > 768 ? 3 : 1;
 
 // some variables for navigation
 let navBox = teachersList.querySelector(".navigation");
@@ -112,7 +115,8 @@ function generateItems(page) {
 			tmp.classList.remove("hidden");
 		}
 		listingTable.appendChild(newItm);
-		setTimeout(() => {newItm.classList.add("full-opacity")}, (i - page * recordsPerPage + recordsPerPage + 1) * 100);
+		setTimeout(() => {newItm.classList.add("full-opacity")},
+			(i - page * recordsPerPage + recordsPerPage + 1) * 100);
 	}
 }
 
@@ -126,7 +130,7 @@ function changePage(page) {
 		generateItems(page);
 	} else 	{
 		let listingTableTmp = listingTable.querySelectorAll(".teacher-item");
-		for (let i = 0; i < 3; i++) {
+		for (let i = 0; i < recordsPerPage; i++) {
 			listingTableTmp[i].classList.remove("full-opacity");
 			setTimeout( () => listingTableTmp[i].remove(), 200 )
 		}
@@ -134,7 +138,7 @@ function changePage(page) {
 			generateItems(page)
 		},200)	
 	}
-	
+	changeTeacherInfo(teachersData[page - 1])
     crntPage.textContent = page;
 
 	// change style of btns when shown first or last page
@@ -199,7 +203,12 @@ function Ant(crslId) {
 Ant.defaults = {
 
 	// Default options for the carousel
-	elemVisible: 2  , // Кол-во отображаемых элементов в карусели
+	elemVisible: function() {
+		if (window.innerWidth > 768) {
+			return 2;
+		}
+		return 1;
+	}  , // Кол-во отображаемых элементов в карусели
 	loop: true,     // Бесконечное зацикливание карусели 
 	auto: true,     // Автоматическая прокрутка
 	interval: 10000, // Интервал между прокруткой элементов (мс)
