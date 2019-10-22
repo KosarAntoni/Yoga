@@ -293,6 +293,10 @@ header .social-btns {
     margin-bottom: 15px;
 }
 
+.main-post img {
+    display: block;
+}
+
 .main-post .post-text div {
     display: flex;
     flex-direction: column;
@@ -437,22 +441,9 @@ header .social-btns {
 .abonaments .main-block {
     padding: 60px 55px;
     width: 330px;
+    height: min-content;
     box-sizing: border-box;
     margin: 0 35px;
-
-    background: #FFFFFF;
-    box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2);  
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.abonaments .second-block {
-    padding: 60px 55px 0;
-    margin-bottom: auto;
-    width: 260px;
-    box-sizing: border-box;
 
     background: #FFFFFF;
     box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2);  
@@ -482,18 +473,26 @@ header .social-btns {
 .abonaments .price {
     font-size: 30px;
     font-weight: bold;
-    margin-bottom: 35px;
 }
 
 .abonaments .order-btn {
+    display: block;
+
+    margin-top: 35px;
     padding: 15px 50px;
     font-size: 12px;
     color: #fff;
     background-color: #8E80A9;
 }
 
-.abonaments .second-block .order-btn {
+.abonaments .main-block:first-child .order-btn,
+.abonaments .main-block:last-child .order-btn {
     display: none;
+}
+
+.abonaments .main-block:first-child,
+.abonaments .main-block:last-child {
+    margin: 0;
 }
 
 
@@ -954,6 +953,14 @@ footer input[type="submit"] {
         box-sizing: border-box;
     }
 
+    .section-number {
+        font-size: 18px;
+    }
+    .section-number::after {
+        margin-left: 5px;
+        width: 20px;
+    }
+
     header {
         height: 770px;
     }
@@ -973,6 +980,293 @@ footer input[type="submit"] {
         width: 30px;
         height: 26px;
     }
+
+    .main-post {
+        margin-right: 20px;
+    }
+
+    .main-post img,
+    .main-post .post-wrapper {
+        max-width: 245px;
+    }
+
+    .main-post .post-text {
+        padding: 20px;
+    }
+
+    .main-post h3,
+    .post h3 {
+        font-weight: bold;
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+    .main-post .post-text div span,
+    .post .post-text div span {
+        font-size: 10px;
+    }
+
+    .main-post .post-text div:last-of-type,
+    .post .post-text div:last-of-type {
+        margin-top: 10px;
+    }
+
+    .post {
+        margin-bottom: 20px;
+    }
+
+    .post img {
+        height: 122px;
+    }
+
+    .post .post-wrapper  {
+        width: 205px;
+    }
+
+    .post .post-text {
+        padding: 20px;
+    }
+
+    .post .post-wrapper .full-post {
+        bottom: 24px;
+        right: 25px;
+    
+        width: 30px;
+        height: 20px;
+        background-size: 20%;
+    }
+
+    .directions .see-more {
+        font-size: 10px;
+        padding: 7px 0;
+    }
+
+    .abonaments .main-block {
+        padding: 40px 35px;
+        width: 220px;
+        margin: 0 25px; 
+    }
+
+    .abonaments h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    
+    .abonaments .pink-text span{
+        font-size: 10px;
+    }
+    
+    .abonaments .pink-text{
+        margin-bottom: 10px;
+    }
+    
+    .abonaments .price {
+        font-size: 21px;
+    }
+
+    .abonaments .order-btn {
+        margin-top: 17px;
+        padding: 10px 20px;
+        font-size: 10px;
+    }
+
+    .abonaments .main-block:first-child,
+    .abonaments .main-block:last-child {
+        width: 175px;
+    }
+
+    .teacher-item {
+        max-width: 255px;
+        margin-bottom: 55px;
+        margin-left: 25px;
+        padding: 10px;
+        padding-left: 90px;
+    }
+    
+    .full-opacity {
+        transform: scale(1);
+        opacity: 1 !important;
+    }
+    
+    .teacher-item:nth-of-type(3) {
+        margin-bottom: 45px;
+    }
+    
+    .teachers-list {
+        padding-right: 40px;
+    }
+
+    .teacher-item img {
+        width: 90px;
+        height: 90px;
+        bottom: 10px;
+        left: -15px;
+    }
+    
+    .teacher-item div:first-of-type,
+    .teacher-name {
+        font-size: 10px;
+        line-height: 15px;
+    }
+    
+    .our-team .social-btns {
+        display: flex;
+        justify-content: space-between;
+        width: 40px;
+        margin-left: -3px;  
+    }
+
+    .our-team .social-btns a {
+        width: 10px;
+        height: 10px;
+        background-size: contain;
+    }
+    
+    .teacher-name {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .back-btn,
+    .back-btn-disactive,
+    .forward-btn,
+    .forward-btn-disactive {
+        width: 30px;
+        height: 20px;
+        background-size: 20%;
+    }
+    
+    
+    .lesson-type {
+        font-size: 10px;
+    }
+    
+    .teacher-item .see-more {
+        font-size: 10px;
+        border-bottom: 1px solid #8373A1;
+    }
+
+    .teacher-about h3 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    
+    .teacher-about .experience {
+        font-size: 12px;
+        margin-bottom: 15px;
+    }
+    
+    .teacher-about p {
+        max-width: 310px;
+        font-size: 10px;
+        line-height: 15px;
+    }
+
+    .reviews {
+        margin-bottom: 70px;
+    }
+
+    .reviews h2 {
+        margin-bottom: 40px;
+    }
+
+    .review-post {        
+        width: 250px;
+        padding: 40px 15px 30px;
+    }
+    
+    .review-post p {
+        font-size: 10px;
+        line-height: 15px;
+        max-width: 250px;
+    
+        margin-bottom: 1.5em;
+    }
+    
+    .ant-carousel {
+        max-width: 550px;
+    }
+
+    .footer-top {
+        align-items: center;
+        flex-direction: column-reverse;
+        padding: 0;
+        height: auto;
+    }
+
+    .footer-about {
+        width: 100%;
+        background-color: #8373A1;
+        padding-bottom: 20px;
+    }
+
+    .about-item,
+    .social-btns {
+        padding: 0 75px;
+        box-sizing: border-box;
+    }
+
+    .footer-about div {
+        margin-bottom: 30px;
+    }
+
+    .footer-about div span {
+        color: #fff;
+    }
+
+    footer .social-btns li{
+        width: 30px;
+        height: 30px;
+        margin-right: 20px;
+    }
+
+    footer .social-btns li a{
+        filter: brightness(1000%);
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-size: contain;        
+    }
+
+    .footer-top form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center ;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 70px 35px;
+    }
+
+    .footer-top form h2 {
+        line-height: normal;
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+
+    footer .input-field {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+    
+    footer input[type="submit"] {
+        background: #E65C7B;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+    }    
+
+    .footer-copyrights {
+        padding: 0 75px 75px;
+        justify-content: space-between;
+    }
+
+    .footer-copyrights a {
+        margin-bottom: 25px;
+    }
+
 }
 
 
@@ -1140,12 +1434,7 @@ footer input[type="submit"] {
         display: block;
         padding: 15px 20px;
         font-size: 10px;
-    }
-
-
-
-
-    
+    } 
 
     .our-team {
         margin-bottom: 70px;
@@ -1240,10 +1529,6 @@ footer input[type="submit"] {
         line-height: 15px;
     }
 
-
-
-
-
     .reviews {
         margin-bottom: 70px;
     }
@@ -1267,7 +1552,7 @@ footer input[type="submit"] {
     
     .ant-carousel {
         max-width: 270px;
-      }
+    }
 
     .footer-top {
         align-items: center;

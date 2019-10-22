@@ -27,35 +27,36 @@ let teachersData = [
     { name: "John Shepard2",
 	  lesson: "Chath-Yoga",
 	  foto: "images/profileImg.jpg",
+	  twLink: "https://twitter.com",
 	  experience: "8 years",
-	  about: "Образование и опыт работы: Практикует с 2011 года, является"
+	  about: "2 Образование и опыт работы: Практикует с 2011 года, является"
 	},
 
 	{ name: "John Shepard3",
 	  lesson: "Chath-Yoga",
 	  foto: "images/profileImg.jpg",
 	  experience: "8 years",
-	  about: "Образование и опыт работы: Практикует с 2011 года, является"
+	  about: "3 Образование и опыт работы: Практикует с 2011 года, является"
 	},
 
 	{ name: "John Shepard4",
 	  lesson: "Chath-Yoga",
 	  foto: "images/profileImg.jpg",
 	  experience: "8 years",
-	  about: "Образование и опыт работы: Практикует с 2011 года, является"
+	  about: "4 Образование и опыт работы: Практикует с 2011 года, является"
 	},
 
 	{ name: "John Shepard5",
 	  lesson: "Chath-Yoga",
 	  foto: "images/profileImg.jpg",
 	  experience: "8 years",
-	  about: "Образование и опыт работы: Практикует с 2011 года, является"
+	  about: "5 Образование и опыт работы: Практикует с 2011 года, является"
 	},
 
 	{ name: "John Shepard6",
 	  lesson: "Chath-Yoga",
 	  foto: "images/profileImg.jpg",
 	  experience: "8 years",
-	  about: "Образование и опыт работы: Практикует с 2011 года, является"
+	  about: "6 Образование и опыт работы: Практикует с 2011 года, является"
 	},
 ];

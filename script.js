@@ -138,7 +138,7 @@ function changePage(page) {
 			generateItems(page)
 		},200)	
 	}
-	changeTeacherInfo(teachersData[page - 1])
+	changeTeacherInfo(teachersData[page * recordsPerPage - recordsPerPage])
     crntPage.textContent = page;
 
 	// change style of btns when shown first or last page
