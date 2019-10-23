@@ -18,13 +18,6 @@ teachersDataReqest.open("GET", "data.json", "true");
 teachersDataReqest.responseType = "json";
 teachersDataReqest.send();
 
-teachersDataReqest.onload = function() {
-	teachersData = teachersDataReqest.response;
-}
-
-
-console.log(teachersData);
-
 const targets = document.querySelectorAll(".sectionCounter");
 
 observer = new IntersectionObserver(entries => {
@@ -76,8 +69,7 @@ let teacherTemplate = teachersList.querySelector("#teacher-item-template").conte
 let teacherAbout = document.querySelector(".teacher-about");
 
 // total count of pages
-let numPages = Math.ceil(teachersData.length / recordsPerPage);
-totalPages.textContent = numPages;
+let numPages;
 
 // eventListeners fo click on btns
 btnPrev.addEventListener("click", function() {
@@ -173,10 +165,15 @@ function changePage(page) {
 }
 
 // on document load show first page
-window.onload = function() {
+
+teachersDataReqest.onload = function() {
+	teachersData = teachersDataReqest.response;
+	console.log(teachersData);
+	numPages = Math.ceil(teachersData.length / recordsPerPage);
 	changePage(1);
-	changeTeacherInfo(teachersData[0])
-};
+	changeTeacherInfo(teachersData[0]);
+	totalPages.textContent = numPages;
+}
 
 // 
 // 
