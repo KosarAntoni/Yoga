@@ -15,8 +15,8 @@ let teachersData;
 
 let teachersDataReqest = new XMLHttpRequest();
 teachersDataReqest.open("GET", "data.json", "true");
-teachersDataReqest.responseType = "json"
-teachersDataReqest.send()
+teachersDataReqest.responseType = "json";
+teachersDataReqest.send();
 
 teachersDataReqest.onload = function() {
 	teachersData = teachersDataReqest.response;
