@@ -189,17 +189,17 @@
                                 <div class="teacher-name"></div>
                                 <div class="lesson-type"></div>
                                 <button class="see-more" href="#">More</button>
-                            </li>
-                        </template>
+                        </li>
+                    </template>
 
 
-                        <div class="navigation">
-                            <button class="back-btn">Back</button>
-                            <div class="crnt-page">1</div>
-                            <div class=""> / </div>
-                            <div class="total-pages">9</div>
-                            <button class="forward-btn">Next</button>
-                        </div>
+                    <div class="navigation">
+                        <button class="back-btn">Back</button>
+                        <div class="crnt-page">1</div>
+                        <div class=""> / </div>
+                        <div class="total-pages">9</div>
+                        <button class="forward-btn">Next</button>
+                    </div>
                 </div>
                             
                 <div class="teacher-about full-opacity">
@@ -217,69 +217,28 @@
                 <div class="ant-carousel">
                     <div class="ant-carousel-hider">
                         <ul class="ant-carousel-list">
-                            <li class="review-post">
-                                <div class="quotes">“1</div>
-                                <p>Хожу на йогу вечером, чтобы расслабиться после тяжелого трудового дня. И после занятий наступает спокойствие!</p>
-                                <p>Йога это отличный способ быстро и качественно расслабиться. Спасибо инструктору Марине.</p>
-                                <img src="images/profileImg.jpg" alt="" width="52" height="52">
-                                <div class="reviewer-data">
-                                    <div>Серёжа Попов</div>
-                                    <div>16 мая 2018</div>
-                                    <ul class="social-btns">
-                                        <li>
-                                            <a href="#" class="vk-btn">tw</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="tw-btn">vk</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="fb-btn">fb</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="review-post">
-                                <div class="quotes">“2</div>
-                                <p>Хожу на йогу вечером, чтобы расслабиться после тяжелого трудового дня. И после занятий наступает спокойствие!</p>
-                                <p>Йога это отличный способ быстро и качественно расслабиться. Спасибо инструктору Марине.</p>
-                                <img src="images/profileImg.jpg" alt="" width="52" height="52">
-                                <div class="reviewer-data">
-                                    <div>Серёжа Попов</div>
-                                    <div>16 мая 2018</div>
-                                    <ul class="social-btns">
-                                        <li>
-                                            <a href="#" class="vk-btn">tw</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="tw-btn">vk</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="fb-btn">fb</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="review-post">
-                                <div class="quotes">“3</div>
-                                <p>Хожу на йогу вечером, чтобы расслабиться после тяжелого трудового дня. И после занятий наступает спокойствие!</p>
-                                <p>Йога это отличный способ быстро и качественно расслабиться. Спасибо инструктору Марине.</p>
-                                <img src="images/profileImg.jpg" alt="" width="52" height="52">
-                                <div class="reviewer-data">
-                                    <div>Серёжа Попов</div>
-                                    <div>16 мая 2018</div>
-                                    <ul class="social-btns">
-                                        <li>
-                                            <a href="#" class="vk-btn">tw</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="tw-btn">vk</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="fb-btn">fb</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
+                            <template id="review-post-template">
+                                <li class="review-post">
+                                    <div class="quotes">“</div>
+                                    <div class="review-text"></div>
+                                    <img src="images/profileImg.jpg" alt="" width="52" height="52">
+                                    <div class="reviewer-data">
+                                        <div class="name"></div>
+                                        <div class="date"></div>
+                                        <ul class="social-btns">
+                                            <li>
+                                                <a href="#" class="vk-btn hidden">tw</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="tw-btn hidden">vk</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="fb-btn hidden">fb</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </template>
                         </ul>
                     </div>
                     <div class="ant-carousel-arrow-left"></div>

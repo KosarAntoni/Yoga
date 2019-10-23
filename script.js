@@ -4,43 +4,42 @@
 // 
 // 
 
-//add div to document
-let sectionNumber = document.createElement("div");
-sectionNumber.classList.add("section-number");
-if (window.innerWidth >= 768) {
+
+
+function sectionNumber() {
+	//add div to document
+	let sectionNumber = document.createElement("div");
+	sectionNumber.classList.add("section-number");
 	document.body.appendChild(sectionNumber);
+	const targets = document.querySelectorAll(".sectionCounter");
+	
+	observer = new IntersectionObserver(entries => {
+	  entries.forEach(entry => {
+		// additional check current section number != current id
+		if (entry.intersectionRatio > 0 && sectionNumber.textContent != entry.target.dataset.id) {
+			sectionNumber.classList.remove("sn-animation");
+			// some timers for smoth animation
+			setTimeout( function() {
+				sectionNumber.textContent = entry.target.dataset.id;
+			}, 200);
+			setTimeout( function() {
+				sectionNumber.classList.add("sn-animation");
+			}, 200);
+		} 
+	  });
+	}, {
+			threshold: 0.7 //visibility of object to change counter
+	   });
+	
+	targets.forEach(section => {
+		observer.observe(section);
+	});
 }
 
-let teachersData;
+if (window.innerWidth >= 768) {
+	sectionNumber()
+}
 
-let teachersDataReqest = new XMLHttpRequest();
-teachersDataReqest.open("GET", "data.json", "true");
-teachersDataReqest.responseType = "json";
-teachersDataReqest.send();
-
-const targets = document.querySelectorAll(".sectionCounter");
-
-observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-	// additional check current section number != current id
-    if (entry.intersectionRatio > 0 && sectionNumber.textContent != entry.target.dataset.id) {
-		sectionNumber.classList.remove("sn-animation");
-		// some timers for smoth animation
-		setTimeout( function() {
-			sectionNumber.textContent = entry.target.dataset.id;
-		}, 200);
-		setTimeout( function() {
-			sectionNumber.classList.add("sn-animation");
-		}, 200);
-    } 
-  });
-}, {
-		threshold: 0.7 //visibility of object to change counter
-   });
-
-targets.forEach(section => {
-  observer.observe(section);
-});
 
 //
 // 
@@ -54,38 +53,42 @@ targets.forEach(section => {
 // 
 // 
 
-let currentPage = 1;
-let recordsPerPage = window.innerWidth >= 768 ? 3 : 1;
+let teachersData;
 
-// some variables for navigation
-let navBox = teachersList.querySelector(".navigation");
-let btnNext = navBox.querySelector(".forward-btn");
-let btnPrev = navBox.querySelector(".back-btn");
-let crntPage = navBox.querySelector(".crnt-page");
-let totalPages = navBox.querySelector(".total-pages");
+let teachersDataReqest = new XMLHttpRequest();
+teachersDataReqest.open("GET", "data.json", "true");
+teachersDataReqest.responseType = "json";
+teachersDataReqest.send();
+
+let currentPage = 1;
+let recordsPerPage = document.documentElement.clientWidth >= 768 ? 3 : 1;
 
 let listingTable = teachersList.querySelector("ul");
-let teacherTemplate = teachersList.querySelector("#teacher-item-template").content.querySelector(".teacher-item");
-let teacherAbout = document.querySelector(".teacher-about");
+let reviewsList = document.querySelector(".ant-carousel-list");
+
 
 // total count of pages
 let numPages;
 
 // eventListeners fo click on btns
-btnPrev.addEventListener("click", function() {
-   	if (currentPage > 1) {
-        currentPage--;
-        changePage(currentPage);
-	}
-});
-btnNext.addEventListener("click", function() {
-	if (currentPage < numPages) {
-		currentPage++;
-		changePage(currentPage);
-	}
-});
+function addBtnListener(backward, forward) {
+	backward.addEventListener("click", function() {
+		if (currentPage > 1) {
+			currentPage--;
+			changePage(currentPage);
+		}
+	});
+	forward.addEventListener("click", function() {
+		if (currentPage < numPages) {
+			currentPage++;
+			changePage(currentPage);
+		}
+	});
+}
 
 function changeTeacherInfo(source) {
+	let teacherAbout = document.querySelector(".teacher-about");
+
 	teacherAbout.classList.remove("full-opacity")
 	setTimeout( () => {
 		let experience = teacherAbout.querySelector(".experience");
@@ -97,10 +100,39 @@ function changeTeacherInfo(source) {
 	}, 200 );
 }
 
-function generateItems(page) {
+function generateReviewBox(reviewsArray) {
+	for (itm of reviewsArray) {
+		let newItm = document.querySelector("#review-post-template")
+			.content.querySelector(".review-post")
+			.cloneNode(true);
+		newItm.querySelector(".review-text").innerHTML = itm.text;
+		newItm.querySelector(".name").textContent = itm.name;
+		newItm.querySelector(".date").textContent = itm.date;
+		reviewsList.append(newItm);
+		if (itm.vkLink) {
+			let tmp = newItm.querySelector(".vk-btn")
+			tmp.href = itm.vkLink;
+			tmp.classList.remove("hidden");
+		}
+		if (itm.fbLink) {
+			let tmp = newItm.querySelector(".fb-btn")
+			tmp.href = itm.fbLink;
+			tmp.classList.remove("hidden");
+		}
+		if (itm.twLink) {
+			let tmp = newItm.querySelector(".tw-btn")
+			tmp.href = itm.twLink;
+			tmp.classList.remove("hidden");
+		}
+	}
+}
+
+function generateTeacherBox(page) {
 	for (let i = (page-1) * recordsPerPage; i < (page * recordsPerPage) && i < teachersData.length; i++) {
-		let newItm = teacherTemplate.cloneNode(true);
-		newItm.querySelector("img").src = teachersData[i].foto;
+		let newItm = teachersList.querySelector("#teacher-item-template")
+			.content.querySelector(".teacher-item")
+			.cloneNode(true);
+		newItm.querySelector("img").src = teachersData[i].photo;
 		newItm.querySelector(".teacher-name").textContent = teachersData[i].name;
 		newItm.querySelector(".lesson-type").textContent = teachersData[i].lesson;
 		newItm.querySelector(".see-more").addEventListener( "click", () => changeTeacherInfo(teachersData[i]) );
@@ -119,20 +151,24 @@ function generateItems(page) {
 			tmp.href = teachersData[i].twLink;
 			tmp.classList.remove("hidden");
 		}
-		listingTable.appendChild(newItm);
+		listingTable.append(newItm);
 		setTimeout(() => {newItm.classList.add("full-opacity")},
 			(i - page * recordsPerPage + recordsPerPage + 1) * 100);
 	}
 }
 
 function changePage(page) { 
+	// some variables for navigation
+	let navBox = teachersList.querySelector(".navigation");
+	let crntPage = navBox.querySelector(".crnt-page");
+
     // Validate page
     if (page < 1) page = 1;
 	if (page > numPages) page = numPages;
 
 	// if list is empty dont clear list animation else animate
 	if (!listingTable.childElementCount) {
-		generateItems(page);
+		generateTeacherBox(page);
 	} else 	{
 		let listingTableTmp = listingTable.querySelectorAll(".teacher-item");
 		for (let i = 0; i < recordsPerPage; i++) {
@@ -140,14 +176,15 @@ function changePage(page) {
 			setTimeout( () => listingTableTmp[i].remove(), 200 )
 		}
 		setTimeout( function() {
-			generateItems(page)
+			generateTeacherBox(page)
 		},200)	
 	}
 	changeTeacherInfo(teachersData[page * recordsPerPage - recordsPerPage])
     crntPage.textContent = page;
+}
 
-	// change style of btns when shown first or last page
-    if (page == 1) {
+function changeBtnState(btnPrev, btnNext) {
+	if (page == 1) {
 		btnPrev.classList.remove("back-btn");
         btnPrev.classList.add("back-btn-disactive");
     } else {
@@ -164,16 +201,6 @@ function changePage(page) {
     }
 }
 
-// on document load show first page
-
-teachersDataReqest.onload = function() {
-	teachersData = teachersDataReqest.response;
-	console.log(teachersData);
-	numPages = Math.ceil(teachersData.length / recordsPerPage);
-	changePage(1);
-	changeTeacherInfo(teachersData[0]);
-	totalPages.textContent = numPages;
-}
 
 // 
 // 
@@ -214,7 +241,7 @@ Ant.defaults = {
 
 	// Default options for the carousel
 	elemVisible: function() {
-		if (window.innerWidth >= 768) {
+		if (document.documentElement.clientWidth >= 768) {
 			return 2;
 		}
 		return 1;
@@ -375,4 +402,24 @@ Ant.initialize = function(that) {
 	};
 };
 
-new Ant();
+
+
+teachersDataReqest.onload = function() {
+	let navBox = teachersList.querySelector(".navigation");
+	let totalPages = navBox.querySelector(".total-pages");
+	let btnNext = navBox.querySelector(".forward-btn");
+	let btnPrev = navBox.querySelector(".back-btn");
+
+	addBtnListener(btnPrev, btnNext);
+
+	teachersData = teachersDataReqest.response.teacherData;
+	numPages = Math.ceil(teachersData.length / recordsPerPage);
+
+	changePage(1);
+	generateReviewBox(teachersDataReqest.response.reviewsData);
+
+	changeTeacherInfo(teachersData[0]);
+	totalPages.textContent = numPages;
+
+	new Ant();
+}
