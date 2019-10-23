@@ -7,10 +7,23 @@
 //add div to document
 let sectionNumber = document.createElement("div");
 sectionNumber.classList.add("section-number");
-if (window.innerWidth > 768) {
+if (window.innerWidth >= 768) {
 	document.body.appendChild(sectionNumber);
 }
 
+let teachersData;
+
+let teachersDataReqest = new XMLHttpRequest();
+teachersDataReqest.open("GET", "/data.json", "true");
+teachersDataReqest.responseType = "json"
+teachersDataReqest.send()
+
+teachersDataReqest.onload = function() {
+	let teachersData = teachersDataReqest.response;
+}
+
+
+console.log(teachersData);
 
 const targets = document.querySelectorAll(".sectionCounter");
 
@@ -49,7 +62,7 @@ targets.forEach(section => {
 // 
 
 let currentPage = 1;
-let recordsPerPage = window.innerWidth > 768 ? 3 : 1;
+let recordsPerPage = window.innerWidth >= 768 ? 3 : 1;
 
 // some variables for navigation
 let navBox = teachersList.querySelector(".navigation");
@@ -204,7 +217,7 @@ Ant.defaults = {
 
 	// Default options for the carousel
 	elemVisible: function() {
-		if (window.innerWidth > 768) {
+		if (window.innerWidth >= 768) {
 			return 2;
 		}
 		return 1;

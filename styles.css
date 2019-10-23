@@ -191,7 +191,6 @@ header {
 
     font-size: 14px;
     line-height: 20px;
-    /* max-width: 15em; */
     color: #E65C7B;
 }
 
@@ -218,7 +217,7 @@ header .social-btns {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 6%;
+    width: 60px;
 }
 
 .tw-btn {
@@ -492,7 +491,8 @@ header .social-btns {
 
 .abonaments .main-block:first-child,
 .abonaments .main-block:last-child {
-    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 
@@ -583,9 +583,13 @@ header .social-btns {
 
 .our-team .social-btns {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     width: 60px;
-    margin-left: -3px;  
+    /* margin-left: -3px;   */
+}
+
+.our-team .social-btns li {
+    margin-left: 5px;
 }
 
 .hidden {
@@ -853,13 +857,14 @@ footer {
     display: flex;
     justify-content: center;
 
-    height: 400px;
+    height: 475px;
     width: 100%;
     background: url(images/footerBackground.jpg) no-repeat 50%;
     background-size: cover;
 }
 
 footer .social-btns {
+    width: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -953,6 +958,11 @@ footer input[type="submit"] {
         box-sizing: border-box;
     }
 
+    h2 {
+        font-size: 21px;
+        margin-bottom: 40px !important;
+    }
+
     .section-number {
         font-size: 18px;
     }
@@ -962,7 +972,8 @@ footer input[type="submit"] {
     }
 
     header {
-        height: 770px;
+        height: 484px;
+        padding-bottom: 90px;
     }
 
     .header-description {
@@ -979,6 +990,10 @@ footer input[type="submit"] {
     .first-lesson-btn::before {
         width: 30px;
         height: 26px;
+    }
+
+    .directions {
+        margin-bottom: 120px;
     }
 
     .main-post {
@@ -1041,6 +1056,10 @@ footer input[type="submit"] {
         padding: 7px 0;
     }
 
+    .abonaments {
+        padding-bottom: 120px;
+    }
+
     .abonaments .main-block {
         padding: 40px 35px;
         width: 220px;
@@ -1073,6 +1092,10 @@ footer input[type="submit"] {
     .abonaments .main-block:first-child,
     .abonaments .main-block:last-child {
         width: 175px;
+    }
+
+    .our-team {
+        margin-bottom: 120px;
     }
 
     .teacher-item {
@@ -1111,9 +1134,7 @@ footer input[type="submit"] {
     
     .our-team .social-btns {
         display: flex;
-        justify-content: space-between;
         width: 40px;
-        margin-left: -3px;  
     }
 
     .our-team .social-btns a {
@@ -1192,6 +1213,7 @@ footer input[type="submit"] {
         flex-direction: column-reverse;
         padding: 0;
         height: auto;
+        background: #FCF8FE;
     }
 
     .footer-about {
@@ -1200,8 +1222,8 @@ footer input[type="submit"] {
         padding-bottom: 20px;
     }
 
-    .about-item,
-    .social-btns {
+    .footer-about .about-item,
+    .footer-about .social-btns {
         padding: 0 75px;
         box-sizing: border-box;
     }
@@ -1212,6 +1234,10 @@ footer input[type="submit"] {
 
     .footer-about div span {
         color: #fff;
+    }
+
+    footer .social-btns {
+        width: auto;
     }
 
     footer .social-btns li{
@@ -1233,9 +1259,14 @@ footer input[type="submit"] {
         flex-direction: column;
         justify-content: center;
         align-items: center ;
+        
         box-sizing: border-box;
         width: 100%;
-        padding: 70px 35px;
+        max-width: 100%;
+        padding: 70px 180px;
+
+        background: url(images/footerBackground.jpg) no-repeat center left;
+        background-size: cover;
     }
 
     .footer-top form h2 {
@@ -1400,8 +1431,7 @@ footer input[type="submit"] {
         align-items: center;
     }
 
-    .abonaments .main-block,
-    .abonaments .second-block {
+    .abonaments .main-block{
         justify-content: space-between;
 
         box-sizing: border-box;
@@ -1429,9 +1459,8 @@ footer input[type="submit"] {
         margin: 0;
     }
 
-    .abonaments .order-btn,
-    .abonaments .second-block .order-btn {
-        display: block;
+    .abonaments .main-block .order-btn {
+        display: block !important;
         padding: 15px 20px;
         font-size: 10px;
     } 
@@ -1575,20 +1604,22 @@ footer input[type="submit"] {
         color: #fff;
     }
 
+    footer .social-btns {
+        width: auto;
+    }
+
     footer .social-btns li{
         width: 30px;
         height: 30px;
         margin-right: 20px;
     }
 
-
     footer .social-btns li a{
         filter: brightness(1000%);
         display: block;
         width: 100%;
         height: 100%;
-        background-size: contain;
-        
+        background-size: contain;        
     }
 
     .footer-top form {
@@ -1596,9 +1627,17 @@ footer input[type="submit"] {
         flex-direction: column;
         justify-content: center;
         align-items: center ;
+
         box-sizing: border-box;
         width: 100%;
         padding: 70px 35px;
+        
+        width: 100%;
+        max-width: 100%;
+
+        background: url(images/footerBackground.jpg) no-repeat 20%;
+        background-size: cover;
+
     }
 
     .footer-top form h2 {
