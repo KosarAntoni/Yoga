@@ -19,7 +19,7 @@ teachersDataReqest.responseType = "json"
 teachersDataReqest.send()
 
 teachersDataReqest.onload = function() {
-	let teachersData = teachersDataReqest.response;
+	teachersData = teachersDataReqest.response;
 }
 
 
