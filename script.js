@@ -14,7 +14,7 @@ if (window.innerWidth >= 768) {
 let teachersData;
 
 let teachersDataReqest = new XMLHttpRequest();
-teachersDataReqest.open("GET", "/data.json", "true");
+teachersDataReqest.open("GET", "data.json", "true");
 teachersDataReqest.responseType = "json"
 teachersDataReqest.send()
 
