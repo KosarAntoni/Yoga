@@ -28,7 +28,7 @@ function sectionNumber() {
 		} 
 	  });
 	}, {
-			threshold: 0.7 //visibility of object to change counter
+			threshold: 0.8 //visibility of object to change counter
 	   });
 	
 	targets.forEach(section => {
@@ -44,6 +44,38 @@ if (window.innerWidth >= 768) {
 //
 // 
 // curent section counter end
+// 
+// 
+
+// 
+// price section
+// 
+// 
+
+
+// function to add support for load JSON data in tickets block
+// need to add animation
+
+function priceChanger(arr) {
+	let abonamentList = document.querySelectorAll(".main-block");
+	let priceButtons = document.querySelectorAll(".price-btn");
+
+	for (let i = 0; i < priceButtons.length; i++) {
+		let tmpBtn = priceButtons[i];
+		tmpBtn.addEventListener("click", function() {
+			for (btn of priceButtons) {
+				btn.classList.remove("selected");
+			}
+			tmpBtn.classList.add("selected");
+			abonamentList[0].querySelector(".price").textContent = arr[i].morning + " $"; 	
+			abonamentList[1].querySelector(".price").textContent = arr[i].full + " $"; 		
+			abonamentList[2].querySelector(".price").textContent = arr[i].evening + " $"; 				
+		})
+	}
+}
+
+// 
+// price section end
 // 
 // 
 
@@ -183,7 +215,6 @@ function generateTeacherBox(page) {
 }
 
 function changePage(page) { 
-	console.log(itemsList.length);
 	// some variables for navigation
 	let navBox = teachersList.querySelector(".navigation");
 	let crntPage = navBox.querySelector(".crnt-page");
@@ -421,6 +452,7 @@ teachersDataReqest.onload = function() {
 
 	changePage(1);
 	generateReviewBox(teachersDataReqest.response.reviewsData);
+	priceChanger(teachersDataReqest.response.ticketsPrice);
 
 	changeTeacherInfo(teachersData[0]);
 	totalPages.textContent = numPages;

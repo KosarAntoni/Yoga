@@ -1,4 +1,21 @@
 {
+	"ticketsPrice": {
+		"0":{
+			"morning":"130",
+			"full":"280",
+			"evening":"200"
+		},
+		"1":{
+			"morning":"780",
+			"full":"1680",
+			"evening":"1200"
+		},
+		"2":{
+			"morning":"1560",
+			"full":"3360",
+			"evening":"2400"
+		}
+	},
 	"teacherData":[
 		{   
 			"name": "John Shepard",

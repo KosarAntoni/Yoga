@@ -422,7 +422,9 @@ header .social-btns {
     margin-bottom: 50px;
 }
 
-.abonaments a {
+.abonaments .price-btn {
+    background: none;
+    border: none;
     color: #E65C7B;
     font-size: 12px;
 }
