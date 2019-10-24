@@ -439,10 +439,10 @@ header .social-btns {
 
 .abonaments .main-block {
     padding: 60px 55px;
-    width: 330px;
+    width: 360px;
     height: min-content;
     box-sizing: border-box;
-    margin: 0 35px;
+    margin: 0 15px;
 
     background: #FFFFFF;
     box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2);  
@@ -491,8 +491,7 @@ header .social-btns {
 
 .abonaments .main-block:first-child,
 .abonaments .main-block:last-child {
-    margin-left: 0;
-    margin-right: 0;
+    width: 290px
 }
 
 
@@ -524,6 +523,7 @@ header .social-btns {
 
 .teachers-list {
     width: 50%;
+    height: 586px;
     padding-right: 65px;
     box-sizing: border-box;
 
@@ -533,6 +533,10 @@ header .social-btns {
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-start;
+}
+
+.teachers-list ul {
+    height: 100%;
 }
 
 .teacher-item {
@@ -1066,8 +1070,8 @@ footer input[type="submit"] {
 
     .abonaments .main-block {
         padding: 40px 35px;
-        width: 220px;
-        margin: 0 25px; 
+        width: 240px;
+        margin: 0 10px; 
     }
 
     .abonaments h3 {
@@ -1120,7 +1124,12 @@ footer input[type="submit"] {
     }
     
     .teachers-list {
+        height: 397px;
         padding-right: 40px;
+    }
+
+    .teachers-list ul {
+        height: 100%;
     }
 
     .teacher-item img {
@@ -1435,24 +1444,29 @@ footer input[type="submit"] {
         align-items: center;
     }
 
-    .abonaments .main-block{
+    .abonaments .main-block,
+    .abonaments .main-block:first-child,
+    .abonaments .main-block:last-child{
         justify-content: space-between;
 
         box-sizing: border-box;
         width: 250px;
-        height: 200px;
+        height: 230px;
         padding: 30px 50px;
+        margin: 0;
         margin-bottom: 30px;
     }
 
     .abonaments h3 {
         font-size: 16px;
         margin: 0;
+        margin-bottom: 20px;
     }
 
     .abonaments .price {
         font-size: 18px;
         margin: 0;
+        margin-bottom: 20px;
     }
 
     .abonaments .pink-text span{
@@ -1460,11 +1474,12 @@ footer input[type="submit"] {
     }
 
     .abonaments .pink-text{
-        margin: 0;
+        margin-bottom: 20px;
     }
 
     .abonaments .main-block .order-btn {
         display: block !important;
+        margin: 0;
         padding: 15px 20px;
         font-size: 10px;
     } 
@@ -1480,8 +1495,13 @@ footer input[type="submit"] {
    
     .teachers-list {
         align-items: center;
+        height: 165px;
         width: 100%;
         padding: 0;
+    }
+
+    .teachers-list ul {
+        height: 100%;
     }
     
     .teacher-item {

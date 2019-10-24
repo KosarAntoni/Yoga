@@ -64,6 +64,7 @@ let currentPage = 1;
 let recordsPerPage = document.documentElement.clientWidth >= 768 ? 3 : 1;
 
 let listingTable = teachersList.querySelector("ul");
+let itemsList = listingTable.getElementsByClassName("teacher-item");
 let reviewsList = document.querySelector(".ant-carousel-list");
 
 let navBox = teachersList.querySelector(".navigation");
@@ -182,6 +183,7 @@ function generateTeacherBox(page) {
 }
 
 function changePage(page) { 
+	console.log(itemsList.length);
 	// some variables for navigation
 	let navBox = teachersList.querySelector(".navigation");
 	let crntPage = navBox.querySelector(".crnt-page");
@@ -195,7 +197,7 @@ function changePage(page) {
 		generateTeacherBox(page);
 	} else 	{
 		let listingTableTmp = listingTable.querySelectorAll(".teacher-item");
-		for (let i = 0; i < recordsPerPage; i++) {
+		for (let i = 0; i < itemsList.length; i++) {
 			listingTableTmp[i].classList.remove("full-opacity");
 			setTimeout( () => listingTableTmp[i].remove(), 200 )
 		}
