@@ -1,85 +1,101 @@
 {
 	"teacherData":[
 		{   
-			"name": "John Shepard 1",
+			"name": "John Shepard",
 			"lesson": "Chath-Yoga",
 			"photo": "images/profileImg.jpg",
 			"vkLink": "http://vk.com",
 			"twLink": "https://twitter.com",
 			"fbLink": "http://fb.com",
 			"experience": "8 years",
-			"about": "<p>Образование и опыт работы: Практикует с 2011 года, является сертифицированным инструктором по флоу- йоге. Большой опыт преподавания йоги для начинающих и продолжающих.</p><p>Обучалась в Индии (International Association of Yoga: classical yoga, master of principles yoga therapy), Непале (опыт медитативных и дыхательных техник, проживание в Ашраме), Москва (Аштанга йога центр 108 А. Константинова), Московский центр классической йоги Виктора Бойко. </p> Сертифицированный инструктор по фитнесу и йоге (БГУФК), по массажу (Оздоровительный Витал – центр №401). Организатор и участник многочисленных конвенций и семинаров по йоге, медитативным техникам и здоровому питанию."
+			"about": "<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam distinctio facere, eos velit, sapiente consequatur aliquid dolor ut, ipsam minus non quaerat modi praesentium quae fugit quam ad voluptatibus deleniti.</p><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam distinctio facere, eos velit, sapiente consequatur aliquid dolor ut, ipsam minus non quaerat modi praesentium quae fugit quam ad voluptatibus deleniti.</p><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam distinctio facere, eos velit, sapiente consequatur aliquid dolor ut, ipsam minus non quaerat modi praesentium quae fugit quam ad voluptatibus deleniti.</p>"
 		},
 		{   
-			"name": "John Shepard 2",
+			"name": "John Shepard",
 			"lesson": "Chath-Yoga",
 			"photo": "images/profileImg.jpg",
 			"vkLink": "http://vk.com",
 			"twLink": "https://twitter.com",
+			"fbLink": "http://fb.com",
 			"experience": "8 years",
-			"about": "<p>Образование и опыт работы: Практикует с 2011 года, является сертифицированным инструктором по флоу- йоге. Большой опыт преподавания йоги для начинающих и продолжающих.</p><p>Обучалась в Индии (International Association of Yoga: classical yoga, master of principles yoga therapy), Непале (опыт медитативных и дыхательных техник, проживание в Ашраме), Москва (Аштанга йога центр 108 А. Константинова), Московский центр классической йоги Виктора Бойко. </p> Сертифицированный инструктор по фитнесу и йоге (БГУФК), по массажу (Оздоровительный Витал – центр №401). Организатор и участник многочисленных конвенций и семинаров по йоге, медитативным техникам и здоровому питанию."
+			"about": "<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam distinctio facere, eos velit, sapiente consequatur aliquid dolor ut, ipsam minus non quaerat modi praesentium quae fugit quam ad voluptatibus deleniti.</p><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam distinctio facere, eos velit, sapiente consequatur aliquid dolor ut, ipsam minus non quaerat modi praesentium quae fugit quam ad voluptatibus deleniti.</p><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam distinctio facere, eos velit, sapiente consequatur aliquid dolor ut, ipsam minus non quaerat modi praesentium quae fugit quam ad voluptatibus deleniti.</p>"
 		},
 		{   
-			"name": "John Shepard 3",
+			"name": "John Shepard",
 			"lesson": "Chath-Yoga",
 			"photo": "images/profileImg.jpg",
 			"vkLink": "http://vk.com",
 			"twLink": "https://twitter.com",
+			"fbLink": "http://fb.com",
 			"experience": "8 years",
-			"about": "<p>Образование и опыт работы: Практикует с 2011 года, является сертифицированным инструктором по флоу- йоге. Большой опыт преподавания йоги для начинающих и продолжающих.</p><p>Обучалась в Индии (International Association of Yoga: classical yoga, master of principles yoga therapy), Непале (опыт медитативных и дыхательных техник, проживание в Ашраме), Москва (Аштанга йога центр 108 А. Константинова), Московский центр классической йоги Виктора Бойко. </p> Сертифицированный инструктор по фитнесу и йоге (БГУФК), по массажу (Оздоровительный Витал – центр №401). Организатор и участник многочисленных конвенций и семинаров по йоге, медитативным техникам и здоровому питанию."
+			"about": "<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam distinctio facere, eos velit, sapiente consequatur aliquid dolor ut, ipsam minus non quaerat modi praesentium quae fugit quam ad voluptatibus deleniti.</p><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam distinctio facere, eos velit, sapiente consequatur aliquid dolor ut, ipsam minus non quaerat modi praesentium quae fugit quam ad voluptatibus deleniti.</p><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam distinctio facere, eos velit, sapiente consequatur aliquid dolor ut, ipsam minus non quaerat modi praesentium quae fugit quam ad voluptatibus deleniti.</p>"
 		},
 		{   
-			"name": "John Shepard 4",
+			"name": "John Shepard",
 			"lesson": "Chath-Yoga",
 			"photo": "images/profileImg.jpg",
 			"vkLink": "http://vk.com",
 			"twLink": "https://twitter.com",
+			"fbLink": "http://fb.com",
 			"experience": "8 years",
-			"about": "<p>Образование и опыт работы: Практикует с 2011 года, является сертифицированным инструктором по флоу- йоге. Большой опыт преподавания йоги для начинающих и продолжающих.</p><p>Обучалась в Индии (International Association of Yoga: classical yoga, master of principles yoga therapy), Непале (опыт медитативных и дыхательных техник, проживание в Ашраме), Москва (Аштанга йога центр 108 А. Константинова), Московский центр классической йоги Виктора Бойко. </p> Сертифицированный инструктор по фитнесу и йоге (БГУФК), по массажу (Оздоровительный Витал – центр №401). Организатор и участник многочисленных конвенций и семинаров по йоге, медитативным техникам и здоровому питанию."
+			"about": "<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam distinctio facere, eos velit, sapiente consequatur aliquid dolor ut, ipsam minus non quaerat modi praesentium quae fugit quam ad voluptatibus deleniti.</p><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam distinctio facere, eos velit, sapiente consequatur aliquid dolor ut, ipsam minus non quaerat modi praesentium quae fugit quam ad voluptatibus deleniti.</p><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam distinctio facere, eos velit, sapiente consequatur aliquid dolor ut, ipsam minus non quaerat modi praesentium quae fugit quam ad voluptatibus deleniti.</p>"
 		},
 		{   
-			"name": "John Shepard 5",
+			"name": "John Shepard",
 			"lesson": "Chath-Yoga",
 			"photo": "images/profileImg.jpg",
 			"vkLink": "http://vk.com",
 			"twLink": "https://twitter.com",
+			"fbLink": "http://fb.com",
 			"experience": "8 years",
-			"about": "<p>Образование и опыт работы: Практикует с 2011 года, является сертифицированным инструктором по флоу- йоге. Большой опыт преподавания йоги для начинающих и продолжающих.</p><p>Обучалась в Индии (International Association of Yoga: classical yoga, master of principles yoga therapy), Непале (опыт медитативных и дыхательных техник, проживание в Ашраме), Москва (Аштанга йога центр 108 А. Константинова), Московский центр классической йоги Виктора Бойко. </p> Сертифицированный инструктор по фитнесу и йоге (БГУФК), по массажу (Оздоровительный Витал – центр №401). Организатор и участник многочисленных конвенций и семинаров по йоге, медитативным техникам и здоровому питанию."
+			"about": "<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam distinctio facere, eos velit, sapiente consequatur aliquid dolor ut, ipsam minus non quaerat modi praesentium quae fugit quam ad voluptatibus deleniti.</p><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam distinctio facere, eos velit, sapiente consequatur aliquid dolor ut, ipsam minus non quaerat modi praesentium quae fugit quam ad voluptatibus deleniti.</p><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam distinctio facere, eos velit, sapiente consequatur aliquid dolor ut, ipsam minus non quaerat modi praesentium quae fugit quam ad voluptatibus deleniti.</p>"
 		},
 		{   
-			"name": "John Shepard 6",
+			"name": "John Shepard",
 			"lesson": "Chath-Yoga",
 			"photo": "images/profileImg.jpg",
 			"vkLink": "http://vk.com",
 			"twLink": "https://twitter.com",
+			"fbLink": "http://fb.com",
 			"experience": "8 years",
-			"about": "<p>Образование и опыт работы: Практикует с 2011 года, является сертифицированным инструктором по флоу- йоге. Большой опыт преподавания йоги для начинающих и продолжающих.</p><p>Обучалась в Индии (International Association of Yoga: classical yoga, master of principles yoga therapy), Непале (опыт медитативных и дыхательных техник, проживание в Ашраме), Москва (Аштанга йога центр 108 А. Константинова), Московский центр классической йоги Виктора Бойко. </p> Сертифицированный инструктор по фитнесу и йоге (БГУФК), по массажу (Оздоровительный Витал – центр №401). Организатор и участник многочисленных конвенций и семинаров по йоге, медитативным техникам и здоровому питанию."
+			"about": "<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam distinctio facere, eos velit, sapiente consequatur aliquid dolor ut, ipsam minus non quaerat modi praesentium quae fugit quam ad voluptatibus deleniti.</p><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam distinctio facere, eos velit, sapiente consequatur aliquid dolor ut, ipsam minus non quaerat modi praesentium quae fugit quam ad voluptatibus deleniti.</p><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam distinctio facere, eos velit, sapiente consequatur aliquid dolor ut, ipsam minus non quaerat modi praesentium quae fugit quam ad voluptatibus deleniti.</p>"
+		},
+		{   
+			"name": "John Shepard",
+			"lesson": "Chath-Yoga",
+			"photo": "images/profileImg.jpg",
+			"vkLink": "http://vk.com",
+			"twLink": "https://twitter.com",
+			"fbLink": "http://fb.com",
+			"experience": "8 years",
+			"about": "<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam distinctio facere, eos velit, sapiente consequatur aliquid dolor ut, ipsam minus non quaerat modi praesentium quae fugit quam ad voluptatibus deleniti.</p><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam distinctio facere, eos velit, sapiente consequatur aliquid dolor ut, ipsam minus non quaerat modi praesentium quae fugit quam ad voluptatibus deleniti.</p><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam distinctio facere, eos velit, sapiente consequatur aliquid dolor ut, ipsam minus non quaerat modi praesentium quae fugit quam ad voluptatibus deleniti.</p>"
 		}
+		
 	],
 	"reviewsData":[
 		{
-			"name": "John Shepard 1",
-			"date": "16 мая 2018",
+			"name": "John Shepard",
+			"date": "16 may 2018",
 			"photo": "images/profileImg.jpg",
 			"twLink": "https://twitter.com",
-			"text": "<p>Хожу на йогу вечером, чтобы расслабиться после тяжелого трудового дня. И после занятий наступает спокойствие!</p><p>Йога это отличный способ быстро и качественно расслабиться. Спасибо инструктору Марине.</p>"
+			"text": "<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam distinctio facere, eos velit, sapiente consequatur aliquid dolor ut, ipsam minus non quaerat modi praesentium quae fugit quam ad voluptatibus deleniti.</p><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam distinctio facere, eos velit, sapiente consequatur aliquid dolor ut, ipsam minus non quaerat modi praesentium quae fugit quam ad voluptatibus deleniti.</p>"
 		},
 		{
-			"name": "John Shepard 2",
-			"date": "16 мая 2018",
+			"name": "John Shepard",
+			"date": "16 may 2018",
 			"photo": "images/profileImg.jpg",
 			"vkLink": "http://vk.com",
 			"twLink": "https://twitter.com",
 			"fbLink": "http://fb.com",
-			"text": "<p>Хожу на йогу вечером, чтобы расслабиться после тяжелого трудового дня. И после занятий наступает спокойствие!</p><p>Йога это отличный способ быстро и качественно расслабиться. Спасибо инструктору Марине.</p>"
+			"text": "<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam distinctio facere, eos velit, sapiente consequatur aliquid dolor ut, ipsam minus non quaerat modi praesentium quae fugit quam ad voluptatibus deleniti.</p><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam distinctio facere, eos velit, sapiente consequatur aliquid dolor ut, ipsam minus non quaerat modi praesentium quae fugit quam ad voluptatibus deleniti.</p>"
 		},
 		{
-			"name": "John Shepard 3",
-			"date": "16 мая 2018",
+			"name": "John Shepard",
+			"date": "16 may 2018",
 			"photo": "images/profileImg.jpg",
 			"vkLink": "http://vk.com",
 			"twLink": "https://twitter.com",
-			"text": "<p>Хожу на йогу вечером, чтобы расслабиться после тяжелого трудового дня. И после занятий наступает спокойствие!</p><p>Йога это отличный способ быстро и качественно расслабиться. Спасибо инструктору Марине.</p>"
+			"text": "<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam distinctio facere, eos velit, sapiente consequatur aliquid dolor ut, ipsam minus non quaerat modi praesentium quae fugit quam ad voluptatibus deleniti.</p><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam distinctio facere, eos velit, sapiente consequatur aliquid dolor ut, ipsam minus non quaerat modi praesentium quae fugit quam ad voluptatibus deleniti.</p>"
 		}
 	]
 }   
