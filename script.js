@@ -66,9 +66,33 @@ let recordsPerPage = document.documentElement.clientWidth >= 768 ? 3 : 1;
 let listingTable = teachersList.querySelector("ul");
 let reviewsList = document.querySelector(".ant-carousel-list");
 
+let navBox = teachersList.querySelector(".navigation");
+let totalPages = navBox.querySelector(".total-pages");
+let btnNext = navBox.querySelector(".forward-btn");
+let btnPrev = navBox.querySelector(".back-btn");
+
 
 // total count of pages
 let numPages;
+
+function changeBtnState(btnPrev, btnNext) {
+	if (currentPage == 1) {
+		btnPrev.classList.remove("back-btn");
+        btnPrev.classList.add("back-btn-disactive");
+    } else {
+		btnPrev.classList.remove("back-btn-disactive");
+        btnPrev.classList.add("back-btn");
+    }
+
+    if (currentPage == numPages) {
+		btnNext.classList.remove("forward-btn");
+        btnNext.classList.add("forward-btn-disactive");
+    } else {
+		btnNext.classList.remove("forward-btn-disactive");
+        btnNext.classList.add("forward-btn");
+    }
+}
+
 
 // eventListeners fo click on btns
 function addBtnListener(backward, forward) {
@@ -180,27 +204,10 @@ function changePage(page) {
 		},200)	
 	}
 	changeTeacherInfo(teachersData[page * recordsPerPage - recordsPerPage])
-    crntPage.textContent = page;
+	crntPage.textContent = page;
+	
+	changeBtnState(btnPrev, btnNext)
 }
-
-function changeBtnState(btnPrev, btnNext) {
-	if (page == 1) {
-		btnPrev.classList.remove("back-btn");
-        btnPrev.classList.add("back-btn-disactive");
-    } else {
-		btnPrev.classList.remove("back-btn-disactive");
-        btnPrev.classList.add("back-btn");
-    }
-
-    if (page == numPages) {
-		btnNext.classList.remove("forward-btn");
-        btnNext.classList.add("forward-btn-disactive");
-    } else {
-		btnNext.classList.remove("forward-btn-disactive");
-        btnNext.classList.add("forward-btn");
-    }
-}
-
 
 // 
 // 
@@ -405,11 +412,6 @@ Ant.initialize = function(that) {
 
 
 teachersDataReqest.onload = function() {
-	let navBox = teachersList.querySelector(".navigation");
-	let totalPages = navBox.querySelector(".total-pages");
-	let btnNext = navBox.querySelector(".forward-btn");
-	let btnPrev = navBox.querySelector(".back-btn");
-
 	addBtnListener(btnPrev, btnNext);
 
 	teachersData = teachersDataReqest.response.teacherData;

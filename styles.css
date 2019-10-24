@@ -777,9 +777,13 @@ header .social-btns {
 
 .reviewer-data .social-btns {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 60px;
     margin-left: -3px;    
+}
+
+.reviewer-data .social-btns li {
+margin-right: 5px;
 }
 
 .reviews-nav button{
