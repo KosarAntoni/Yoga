@@ -66,10 +66,18 @@ function priceChanger(arr) {
 			for (btn of priceButtons) {
 				btn.classList.remove("selected");
 			}
-			tmpBtn.classList.add("selected");
-			abonamentList[0].querySelector(".price").textContent = arr[i].morning + " $"; 	
-			abonamentList[1].querySelector(".price").textContent = arr[i].full + " $"; 		
-			abonamentList[2].querySelector(".price").textContent = arr[i].evening + " $"; 				
+			for (itm of abonamentList) {
+				itm.classList.remove("full-opacity");
+			}
+			setTimeout(() => tmpBtn.classList.add("selected"), 100);			
+			setTimeout(function() {
+				abonamentList[0].querySelector(".price").textContent = arr[i].morning + " $";
+				setTimeout(() => abonamentList[0].classList.add("full-opacity"), 100); 	
+				abonamentList[1].querySelector(".price").textContent = arr[i].full + " $"; 
+				setTimeout(() => abonamentList[1].classList.add("full-opacity"), 200); 		
+				abonamentList[2].querySelector(".price").textContent = arr[i].evening + " $";
+				setTimeout(() => abonamentList[2].classList.add("full-opacity"), 300); 
+			}, 200) 				
 		})
 	}
 }
