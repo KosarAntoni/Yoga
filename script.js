@@ -5,13 +5,29 @@
 // 
 
 
+function showMenu() {
+	let menuBtn = document.querySelector(".menu-box");
+	let menuBox = document.querySelector(".menu");
+	let menuBtnActive = menuBox.querySelector(".menu-btn");
+	document.onscroll = function() {
+		menuBox.classList.remove("menu-active");
+	};
+	menuBtn.addEventListener("click", function(){
+		menuBox.classList.toggle("menu-active");
+	});
+	menuBtnActive.addEventListener("click", function(){
+		menuBox.classList.toggle("menu-active");
+	});
+}
+
+showMenu()
 
 function sectionNumber() {
 	//add div to document
 	let sectionNumber = document.createElement("div");
 	sectionNumber.classList.add("section-number");
 	document.body.appendChild(sectionNumber);
-	const targets = document.querySelectorAll(".sectionCounter");
+	const targets = document.querySelectorAll("[data-id]");
 	
 	observer = new IntersectionObserver(entries => {
 	  entries.forEach(entry => {
