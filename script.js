@@ -20,8 +20,6 @@ function showMenu() {
 	});
 }
 
-showMenu()
-
 function sectionNumber() {
 	//add div to document
 	let sectionNumber = document.createElement("div");
@@ -481,5 +479,6 @@ teachersDataReqest.onload = function() {
 	changeTeacherInfo(teachersData[0]);
 	totalPages.textContent = numPages;
 
+	showMenu()
 	new Ant();
 }
